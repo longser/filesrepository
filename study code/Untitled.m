@@ -1,0 +1,15 @@
+x=[0.1:0.02:1];
+y=[10:2:100];
+[X,Y]=meshgrid(x,y)
+a=1-0.08*10.^(-3).*Y./X;
+b=1+0.01./X+0.2./X./Y;
+Z=a./b;
+mesh(X,Y,Z)
+x1=xlabel('X');
+x2=ylabel('Y');
+x3=zlabel('Z');
+set(x1,'Rotation',15);
+set(x2,'Rotation',-28);
+xlabel('变量泵排量比e','FontWeight','bold');
+ylabel('无因次量△pP/（μnP）','FontWeight','bold');
+zlabel('变量泵效率ηP','FontWeight','bold');
